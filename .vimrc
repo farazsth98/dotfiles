@@ -1,23 +1,25 @@
-filetype indent on
-filetype plugin on
+filetype plugin indent on
 
 syntax on
 set number
 
 set tabstop=4
-set expandtab
-set smarttab
-set autoindent
+set shiftwidth=4
 set smartindent
+set autoindent
 
+set cc=100
 set mouse=a
 
 "vim-plug section
 call plug#begin('~/.vim/plugged')
 
-Plug 'https://github.com/danilo-augusto/vim-afterglow.git'
 Plug 'jiangmiao/auto-pairs'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
-colorscheme afterglow
+colorscheme torte
+source ~/.vim/cscope.vim
+
+map <Esc><Esc> :w<CR>
