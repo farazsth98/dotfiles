@@ -1,0 +1,4 @@
+.include /etc/pulse/default.pa
+
+# Set volume to 50%
+#set-sink-volume 1 30%

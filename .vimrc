@@ -5,21 +5,17 @@ set number
 
 set tabstop=4
 set shiftwidth=4
-set smartindent
-set autoindent
-
-set cc=100
+set cc=80
 set mouse=a
+set expandtab
 
-"vim-plug section
-call plug#begin('~/.vim/plugged')
+set hlsearch
+set incsearch
 
-Plug 'jiangmiao/auto-pairs'
-Plug 'rust-lang/rust.vim'
+" Jump back to last position when reopening a file" 
 
-call plug#end()
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
-colorscheme torte
-source ~/.vim/cscope.vim
-
-map <Esc><Esc> :w<CR>

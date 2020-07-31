@@ -1,0 +1,12 @@
+xterm*faceName: DejaVu Sans Mono Book
+xterm*faceSize: 13
+xterm*allowBoldFonts: false
+xterm*selectToClipboard: true
+
+xterm*loginshell: true
+
+xterm*savelines: 16384
+
+*VT100*translations:      #override \n\
+               Ctrl Shift <Key>C:  copy-selection(SELECT) \n\
+               Ctrl Shift <Key>V:  insert-selection(SELECT)
